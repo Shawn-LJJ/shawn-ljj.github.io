@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/* set background colour for the main content */
+body {
+    background: rgba(255, 192, 203, 0.404);
+}
+
+/* adds a border below the header and add a radial gradient, with the center focusing the header text */
+header {
+    border-bottom: 3px solid black;
+    background: radial-gradient(rgb(219, 170, 219), rgb(134, 0, 223));
+}
+
+/* adds a shadow to the header text and a font style*/
+h1#header-text {
+    text-shadow: rgb(134, 132, 13) 10px 6px 6px;
+    font-family: MV Boli;
+}
+
+/* set a minimum height for the career text section so that when the text is being generated, it does not cause the whole display to jitter as the height of the table constantly changes */
+div#career-text {
+    min-height: 500px;
+}
+

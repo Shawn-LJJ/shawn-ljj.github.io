@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/* adds a background image as a banner with the fadding effect towards the left */
+img#SP-building {
+    object-position: top right;
+    width: 100%;
+    height: min-content;
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0), transparent);
+}
+
+/* style the header text with a text colour and shadow */
+h1#header-text {
+    text-shadow: black -4px -3px 6px;
+    color: darkslategrey;
+    font-family: MV Boli;
+}
+
+/* adds a border below the header */
+header {
+    border-bottom: 3px solid black;
+}
+
+/* set a fixed size for the icons of the course and remove the white background by adding border-radius */
+img.course-icon {
+    width: 150px;
+    border-radius: 100px;
+}
+
+/* adds a maximum width that the carousel can extend  */
+#carousel-content {
+    max-width: 1020px;
+}
+
+/* styles the carousel items */
+.carousel-item {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border: 25px ridge rgb(150, 90, 11);
+    background-color: rgb(190, 119, 68);
+}
+
+/* change the background colour of the main page to grey */
+main {
+    background-color: rgb(224, 224, 224);
+}

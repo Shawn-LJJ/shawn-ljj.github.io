@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Javascripts   Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../CSS/feedback.css">
+
+    <title>Feedback page</title>
+
+    <!--Import the javascript file on glitch effect on text and use the defer attribute so that the script can be run after the page is fully loaded-->
+    <script src="../JS/glitchEffect.js" async></script>
+</head>
+
+<!--I use the onload attribute on the body element because this is the only element I knew of that can run javascript file with the onload attribute-->
+<!--The glitchTransition() function will trigger the glitch text generation as soon as the body element is loaded-->
+<body onload="glitchTransition('header', 'Feedback')">
+    <!--Use glitch transition to generate the header text-->
+    <header>
+        <h1 class="display-1" id="header"></h1>
+    </header>
+
+    <!--The main will contain the actual content-->
+    <main>
+        <!--The nav will have a hamburger icon taken from bootstrap and act as a button to display or hide the nav bar by "materialise" or "unmaterialise" the nav links-->
+        <nav class="container-fluid" style="min-height: 105px;"> <!--Set a minimum height so that when the nav bar is horizontal, it won't cause the content below to lower down when the nav bar is spawn-->
+            <button class="bi bi-list btn float-start" onclick="showNavBar()" style="font-size: 50px;"></button> <!--Use the bootstrap icon to display the button and trigger nav bar-->
+            <div class="row p-4" id="navBar"></div> <!--This element is where the text will be located at-->
+        </nav>
+
+        <!--A simple container for the form, and include the needs-validated to ensure the user entered as required-->
+        <form action="#" class="container needs-validated" style="max-width: 1020px;">
+
+            <!--Header text-->
+            <h1 class="display-3 border-bottom border-2 border-dark mb-4 text-center">Personal information</h1> 
+
+            <!--Get user's name, it is required-->
+            <div>
+                <label for="name" class="form-label">Name (Required)</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+
+            <!--Get user's email, required-->
+            <div>
+                <label for="email" class="form-label">Email (Required)</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <!--Get user's phone number, it is optional, and if the user will to enter, the format for the phone number must be in singapore context-->
+            <div>
+                <label for="phone-num" class="form-label">Phone number</label>
+                <input type="tel" class="form-control" id="phone-num" placeholder="8XXXXXXX or 9XXXXXXX"
+                    pattern="[8-9][0-9]{7}">
+            </div>
+
+            <!--Header text-->
+            <h1 class="display-3 border-bottom border-2 border-dark mb-4 mt-5 text-center">Website feedback</h1>
+
+            <!--Use bootstrap's row and column and make sure the radio buttons are horizontal in big screens and vertical in smaller screens-->
+            <!--Use d-flex and use justify-content-evenly to make sure the radio buttons are spread out evenly throughout-->
+            <div class="row d-flex justify-content-evenly text-center">
+                <!--When the viewport is smaller than md, then it will collapse and become vertical-->
+                <p class="form-label col-md-4">How would you rate my website overall?</p>
+    
+                <div class="form-check col-md-1">
+                    <input type="radio" class="form-check-input" name="rating" id="very-bad">
+                    <label for="very-bad" class="form-check-label">Very bad</label>
+                </div>
+                <div class="form-check col-md-1">
+                    <input type="radio" class="form-check-input" name="rating" id="bad">
+                    <label for="bad" class="form-check-label">Bad</label>
+                </div>
+                <div class="form-check col-md-1">
+                    <input type="radio" class="form-check-input" name="rating" id="average">
+                    <label for="average" class="form-check-label">Average</label>
+                </div>
+                <div class="form-check col-md-1">
+                    <input type="radio" class="form-check-input" name="rating" id="good">
+                    <label for="good" class="form-check-label">Good</label>
+                </div>
+                <div class="form-check col-md-1">
+                    <input type="radio" class="form-check-input" name="rating" id="very-good">
+                    <label for="very-good" class="form-check-label">Very good</label>
+                </div>
+            </div>
+
+            <!--Use textbox for comments, suggestions, or questions-->
+            <div>
+                <label for="textbox" class="form-label">Comments, suggestions or questions?</label>
+                <textarea class="form-control" id="textbox"></textarea>
+            </div>
+
+            <!--Use d-flex and justify-content-evenly to spread the buttons evenly-->
+            <div class="d-flex justify-content-evenly m-5">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+        </form>
+
+    </main>
+</body>
+
+</html>

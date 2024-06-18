@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+/* set a linear gradient for the header, from white to darkblue towards the right, and set a border at the bottom of the header */
+h1#header {
+    background-image: linear-gradient(90deg, white, darkblue);
+    border-bottom: 3px solid black;
+}
+
+/* set a linear gradient such that the side will be light blue and the middle will be light */
+body {
+    background: linear-gradient(90deg, rgb(117, 117, 226), rgb(176, 205, 216), rgb(117, 117, 226));
+}

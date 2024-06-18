@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/*Background image credit: https://wallpapersafari.com/w/aVuDfl
+Set the whole vertical height as the background image and ensure it covers up without repeating */
+#header-bg {
+    background-image: url('../images/pinkClouds.jpg'); 
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* set the width of the figure to half of the entire width given and set border colour */
+figure {
+    width: 50%;
+    border: 25px lightseagreen ridge;
+}
+
+/* make sure the image within the figure box spans the whole width */
+figure img {
+    width: 100%;
+}
+
+/* style the figure caption */
+figure figcaption {
+    background-color: white; 
+    font-style: italic;
+}
+
+/* set a custom border instead of using bootstrap's border because bootstrap ones are too limited and do not offer much options
+set the border radius until they do not appear boxy at all and make the border outline appear */
+div#more-info > div.custom-border {
+    border-radius: 50px;
+    border: 2px solid black;
+}
+
+/* use linear gradient to set the pink background from zero opacity to full opacity*/
+body {
+    background-image: linear-gradient(rgba(255, 192, 203, 0), pink);
+}
+
+/* resize the icons to this default values */
+div.icon > img {
+    width: 100px;
+    height: 100px;
+}
