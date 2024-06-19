@@ -43,3 +43,10 @@ div.icon > img {
     width: 100px;
     height: 100px;
 }
+
+p.inline-background {
+    display: inline-block;
+    background-color: aqua;
+    color: red;
+    padding: 5px; /* Optional padding */
+}
